@@ -24,6 +24,7 @@ io.on('connection', (socket) =>{
 
     if (!isRealString(name) || !isRealString(room)) {
       callback('Name and room name are required.');
+      return;
     }
 
     socket.join(room);
